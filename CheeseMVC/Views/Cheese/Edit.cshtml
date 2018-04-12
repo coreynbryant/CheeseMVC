@@ -1,17 +1,16 @@
-﻿@{
-}
-
-<h1>Edit @ViewBag.cheeses.Name (ID: @ViewBag.cheeses.CheeseId)</h1>
-
+﻿<h1>Edit Cheese @ViewBag.cheeses.Name (id=@ViewBag.cheeses.CheeseId)</h1>
 <form method="post">
+
     <div class="form-group">
-        <label>Name:</label>
-        <input name="@ViewBag.cheeses.Name" type="text" class="form-control" />
+        <label for="name">Name</label>
+        <input class="form-control" name="name" id="name" type="text" value="@ViewBag.cheeses.Name" />
     </div>
     <div class="form-group">
-        <label>Description:</label>
-        <textarea name="@ViewBag.cheeses.Description" type="text" class="form-control"> </textarea>
+        <label for="description">Description</label>
+        <input class="form-control" name="description" id="description" type="text" value="@ViewBag.cheeses.Description" />
     </div>
-    <input type="hidden" value="@ViewBag.cheeses.CheeseId" name="id" />
-    <button class="btn btn-primary" type="submit" value="Edit Cheese"> Edit Cheese</button>
+    <input type="hidden" value="@ViewBag.cheeses.CheeseId" name="cheeseId" />
+
+    <input type="submit" value="Edit Cheese" />
+
 </form>

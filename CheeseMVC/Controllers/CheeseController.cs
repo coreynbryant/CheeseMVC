@@ -63,8 +63,8 @@ namespace CheeseMVC.Controllers
         [HttpPost]
         public IActionResult Edit(int cheeseId, string name, string description)
         {
-            ViewBag.cheeses = CheeseData.GetById(cheeseId);
-            //TODO UPDATE FIELDS
+            CheeseData.GetById(cheeseId).Name = name;
+            CheeseData.GetById(cheeseId).Description = description;
 
 
             return Redirect("/");
